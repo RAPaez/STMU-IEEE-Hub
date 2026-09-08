@@ -62,4 +62,4 @@ Some projects live outside this hub but are linked here:
 ## 🔹 Website  
 
 Visit our chapter website (auto-deployed via GitHub Pages):  
-👉 [IEEE STMU Chapter Website](https://your-org.github.io/ieee-stmu-hub)  
+👉 [IEEE STMU Chapter Website](https://stmarys-ieee.github.io/STMU-IEEE-Hub/)  
