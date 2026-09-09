@@ -24,8 +24,10 @@ const Navbar: React.FC = () => {
   const location = useLocation();
 
   // Navigation menu items configuration
+  // Drives BOTH the desktop and mobile menus below.
   const navItems = [
     { path: '/', label: 'Home' },
+    { path: '/events', label: 'Events' },
     { path: '/projects', label: 'Projects' },
     { path: '/members', label: 'Members' },
     { path: '/about', label: 'About' },
@@ -139,5 +141,3 @@ const Navbar: React.FC = () => {
 };
 
 export default Navbar;
-
-
