@@ -4,6 +4,7 @@ import { ThemeProvider } from './contexts/ThemeContext';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Home from './pages/Home';
+import Events from './pages/Events';
 import Projects from './pages/Projects';
 import Members from './pages/Members';
 import About from './pages/About';
@@ -12,12 +13,20 @@ import Contact from './pages/Contact';
 function App() {
   return (
     <ThemeProvider>
-      <Router>
+      {/*
+        basename must match Vite's `base`. In production that is
+        "/STMU-IEEE-Hub/"; in `npm run dev` it is "/". Without it, every
+        route fails to match on GitHub Pages and falls through to the
+        "*" catch-all below, which is why the site appeared to work while
+        every nav link 404'd.
+      */}
+      <Router basename={import.meta.env.BASE_URL}>
         <div className="min-h-screen flex flex-col">
           <Navbar />
           <main className="flex-grow">
             <Routes>
               <Route path="/" element={<Home />} />
+              <Route path="/events" element={<Events />} />
               <Route path="/projects" element={<Projects />} />
               <Route path="/members" element={<Members />} />
               <Route path="/about" element={<About />} />
@@ -33,5 +42,3 @@ function App() {
 }
 
 export default App;
-
-
